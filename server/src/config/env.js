@@ -27,6 +27,9 @@ export const env = {
     token: required('TWILIO_AUTH_TOKEN'),
     from: required('TWILIO_FROM_NUMBER')
   },
+  // Added for Nodemailer (e.g., using Gmail)
+  emailUser: required('EMAIL_USER'),
+  emailPass: required('EMAIL_PASS'),
   otp: {
     length: Number(process.env.OTP_LENGTH || 6),
     ttlSec: Number(process.env.OTP_TTL_SECONDS || 300),

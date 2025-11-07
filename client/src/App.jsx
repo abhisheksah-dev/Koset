@@ -11,15 +11,15 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="p-4">
+      <main className="pt-16">
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
+          <Route path="/" element={<div className="p-4">Home</div>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/otp" element={<OtpVerify />} />
           <Route path="/onboarding/phone" element={<OnboardingPhone />} />
         </Routes>
-      </div>
+      </main>
     </>
   );
 }

@@ -10,6 +10,16 @@ export async function post(path, body) {
   return res.json();
 }
 
+export async function put(path, body) {
+  const res = await fetch(API + path, {
+    method: 'PUT',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  return res.json();
+}
+
 export async function get(path) {
   const res = await fetch(API + path, { credentials: 'include' });
   return res.json();
